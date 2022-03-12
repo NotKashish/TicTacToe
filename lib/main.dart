@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tic_tac_toe/screens/new_game.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //TODO: 4 Replace MyHomePage with NewGame
-      home: NewGame(),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
