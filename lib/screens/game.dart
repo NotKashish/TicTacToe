@@ -41,6 +41,8 @@ class _GameState extends State<Game> {
     } else {
       moves += 1;
       tiles[index] = currentPlayer;
+      print(index);
+      print(tiles[index]);
       checkGameEnd();
       if(gameStatus != 'playing') {
         reset();
@@ -93,9 +95,6 @@ class _GameState extends State<Game> {
     currentPlayer = currentPlayer == 'X' ? 'O' : 'X';
     moves = 0;
     gameStatus = 'playing';
-    setState(() {
-
-    });
   }
 
   @override
@@ -299,7 +298,7 @@ class _GameState extends State<Game> {
             ),
           ),
           //TODO 51: Add a named button to reset the game
-          NamedButton(name: 'Reset Game', onTap: reset),
+          NamedButton(name: 'Reset Game', onTap: () => reset()),
         ],
       ),
     );
